@@ -87,6 +87,7 @@
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. 
             Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
           </p>
+          <a class="btn btn-default" href="maps.google.com">In Google Maps anzeigen &raquo;</a>
           
           <hr class="featurette-divider">
           
@@ -161,10 +162,14 @@
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   
     <script>
+         
+      //Location der Praxis
+      var latlng = new google.maps.LatLng(52.5312608, 13.293457);
+      
       //Einstellungen für die Karte
       var mapOptions = {
-        zoom: 11, //Mittlerer Zoom
-        center: new google.maps.LatLng(52.5312608, 13.293457), //Startposition irgendwo über Berlin
+        zoom: 15, //Mittlerer Zoom
+        center: latlng, //Startposition irgendwo über Berlin
         mapTypeId: google.maps.MapTypeId.ROADMAP, //Straßenkarte
         disableDefaultUI: true //UI Elemente (Zoom etc) ausblenden
       }
@@ -172,7 +177,20 @@
       //Karte erzeugen
       var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-
+      //Marker erstellen
+      var marker = new google.maps.Marker({
+        map: map,
+        position: latlng,
+        title: "Titel"
+      });
+      
+      //Infowindow erstellen. Inhalt ist kopiert
+      var infoWindow = new google.maps.InfoWindow({
+        content: "<h4 class='no-margin-bottom'>Praxis Mustermann</h4><p>Musterstr. 42<br>1337 Musterort</p>"
+      });
+      
+      infoWindow.open(map,marker);
+      
     </script>
   </body>
 </html>
