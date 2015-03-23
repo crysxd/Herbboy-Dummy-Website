@@ -161,10 +161,26 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="assets/js/vendor/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  
+    <script>
+      //Einstellungen für die Karte
+      var mapOptions = {
+        zoom: 11, //Mittlerer Zoom
+        center: new google.maps.LatLng(52.5312608, 13.293457), //Startposition irgendwo über Berlin
+        mapTypeId: google.maps.MapTypeId.ROADMAP, //Straßenkarte
+        disableDefaultUI: true //UI Elemente (Zoom etc) ausblenden
+      }
+
+      //Karte erzeugen
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+
+    </script>
   </body>
 </html>
