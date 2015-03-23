@@ -76,6 +76,9 @@ body {
   background-image: url(imgs/welcome_2.jpg);
 }
 
+.map-slide {
+  
+}
 
 
 /* MARKETING CONTENT
@@ -120,6 +123,10 @@ body {
 
 .no-margin-top {
   margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
 }
 
 .center-content {

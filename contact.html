@@ -64,7 +64,7 @@
       
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <div class="first-slide"></div>
+          <div class="map-slide" id="map"></div>
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -88,26 +88,56 @@
       <!-- START THE FEATURETTES -->
       <div class="row featurette">
         <div class="col-md-9">
-          <h2 class="featurette-heading no-margin-top">Herzlich Willkommen! <span class="text-muted">Ihre Praxis Mustermann.</span></h2>
+          <h2 class="featurette-heading no-margin-top">Anfahrt</h2>
           <p class="lead">
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. 
             Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. 
             Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
           </p>
+          
+          <hr class="featurette-divider">
+          
+          <h2 class="featurette-heading no-margin-top">Kontaktformular</h2>
+          <form role="form" action="contact.php" method="post">
+            <div class="form-group">
+              <label for="bname">Vorname:</label>
+              <input type="text" class="form-control" name="bname" required>
+            </div>
+            <div class="form-group">
+              <label for="bsurename">Nachname:</label>
+              <input type="text" class="form-control" name="bsurename" required>
+            </div>
+            <div class="form-group">
+              <label for="bphone">Telefonnummer:</label>
+              <input type="phone" class="form-control" name="bphone" required>
+            </div>
+            <div class="form-group">
+              <label for="bemail">Email-Adresse:</label>
+              <input type="email" class="form-control" name="bemail" required>
+            </div>
+            <div class="form-group">
+              <label for="brequest">Anfrage:</label>
+              <textarea name="brequest" class="form-control" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Abschicken</button>
+          </form>
         </div>
         <div class="col-md-3">
-          <div class="panel panel-default">
+          <div class="panel panel-default contact-panel">
             <div class="panel-body">
-              <div class="center-content">
-                <img class="circle-image" src="imgs/person.jpg" alt>
-                <h4>Prof. Dr. Mustermann</h4>
-                <p>
-                  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. 
-                  Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-                </p>
-                <a class="btn btn-default" href="#about" role="button">Über uns &raquo;</a>
-              </div>
+              <h4 class="no-margin-bottom">Telefon</h4>
+              <p>12345 / 784 434 43</p>
+              <h4 class="no-margin-bottom">Email</h4>
+              <p>hello@praxis-mustermann.de</p>
+              <h4 class="no-margin-bottom">Fax</h4>
+              <p>12345 / 784 434 43</p>
+              <h4 class="no-margin-bottom">Adresse</h4>
+              <p>Praxis Mustermann<br>Musterstr. 42<br>1337 Musterort</p>
+              <p>
+                <a class="btn btn-success" href="tel:1234578443443"><span class="glyphicon glyphicon-phone"></span> Anrufen</a>
+                <a class="btn btn-success" href="mailto:hello@praxis-mustermann.de"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+              </p>
             </div>
           </div>      
         </div>
